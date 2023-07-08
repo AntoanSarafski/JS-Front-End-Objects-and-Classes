@@ -1,6 +1,5 @@
-const person = {
-  name: "Tony",
-  age: 31,
-};
+const person = {};
+person.name = "Tony";
+person.age = 31;
 
-console.log(person.name);
+console.log(`Name: ${person.name}\nAge: ${person.age}`);
