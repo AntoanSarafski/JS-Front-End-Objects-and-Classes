@@ -1,5 +1,13 @@
-const person = {};
-person.name = "Tony";
-person.age = 31;
+const person = {
+  firstName: "Tony",
+  lastName: "CSKA",
+  age: 31,
 
-console.log(`Name: ${person.name}\nAge: ${person.age}`);
+  printNames: function () {
+    console.log(
+      `First Name: ${person.firstName}\nLast Name: ${person.lastName}\nAge: ${person.age}`
+    );
+  },
+};
+
+person.printNames();
