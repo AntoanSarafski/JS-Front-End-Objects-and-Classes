@@ -1,13 +1,6 @@
-function createGame() {
-  let score = 0;
-
-  return {
-    inc: () => score++,
-    get: () => console.log(score),
-  };
-}
-
-const game = createGame();
-game.get();
-game.inc();
-game.get();
+const person = {
+  firstName: "Antoan",
+  lastName: "Sarafski",
+  age: 31,
+  programmingLanguages: ["c#", "js", "html"],
+};
