@@ -1,4 +1,4 @@
-function solve(input) {
+function collectPhones(input) {
   let phoneBook = {};
   for (let line of input) {
     let tokens = line.split(" ");
@@ -12,4 +12,9 @@ function solve(input) {
   }
 }
 
-solve(["Tim 084984563", "Peter 084598158", "Bill 089846851", "Tim 0877989599"]);
+collectPhones([
+  "Tim 084984563",
+  "Peter 084598158",
+  "Bill 089846851",
+  "Tim 0877989599",
+]);
