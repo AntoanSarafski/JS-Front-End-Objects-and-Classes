@@ -1,25 +1,13 @@
-function createCity(name, population, treasury) {
+function createGame() {
+  let score = 0;
+
   return {
-    name,
-    population,
-    treasury,
-    taxRate: 10,
-    collectTaxes() {
-      this.treasury += this.population * this.taxRate;
-    },
-
-    applyGrowth(percentage) {
-      this.population += this.population * percentage;
-    },
-
-    applyRecession(percentage) {
-      this.population -= this.population * percentage;
-    },
+    inc: () => score++,
+    get: () => console.log(score),
   };
 }
 
-const city = createCity("Tortuga", 7000, 15000);
-city.collectTaxes();
-console.log(city.treasury);
-city.applyGrowth(0.05);
-console.log(city.population);
+const game = createGame();
+game.get();
+game.inc();
+game.get();
