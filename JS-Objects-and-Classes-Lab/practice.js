@@ -13,9 +13,11 @@
 // person.printNames();
 
 function printCityInfo(city) {
-  for (const key in city) {
-    console.log(key + " -> " + city[key]);
-  }
+  Object.entries(city).forEach(function (pair) {
+    const key = pair[0];
+    const value = pair[1];
+    console.log(key + " -> " + value);
+  });
 }
 
 const city = {
