@@ -5,8 +5,8 @@ function collectPhones(arr) {
     return acc;
   }, {});
 
-  Object.keys(phoneObj).forEach((key) => {
-    console.log(`${key} -> ${phoneObj[key]}`);
+  Object.entries(phoneObj).forEach(([key, value]) => {
+    console.log(`${key} -> ${value}`);
   });
 }
 
