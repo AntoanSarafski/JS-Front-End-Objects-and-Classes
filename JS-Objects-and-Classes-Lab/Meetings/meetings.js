@@ -1,18 +1,15 @@
 function schedule(input) {
-  const schedule = input.reduce((acc, curr) => {
-    const [day, name] = curr.split(" ");
+  let meetings = {};
+  for (let line of input) {
+    let [weekday, name] = line.split(" ");
 
-    if (acc.hasOwnProperty(day)) {
-      console.log(`Conflict for ${day}`);
+    if (meetings.hasOwnProperty(weekday)) {
+      console.log(`Conflict on ${weekday}`);
     } else {
-      acc[day] = name;
-      console.log(`Schedule for ${day}`);
+      meetings[weekday] = name;
+      console.log(`Shedule for ${weekday}`);
     }
-
-    return acc;
-  }, {});
-
-  console.log(schedule);
+  }
 }
 
 schedule(["Monday Peter", "Wednesday Bill", "Monday Tim", "Friday Tim"]);
