@@ -18,7 +18,13 @@ function solve(input) {
         const song = new Song(type, name, length);
         return song;
         // map function return to us array from songs!
-    }).filter(song => song.type === typeToDisplay)
+    }).filter((song) => {
+        if (typeToDisplay === 'all'){
+            return song;
+        }
+
+        return song.type === typeToDisplay;
+    })
     .map((song) => song.name)
     .join("\n");
     console.log(result);
