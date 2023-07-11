@@ -13,7 +13,7 @@ function solve(input) {
     const [_, ...songs] = input;
     // Make variable songs with array with song names.
     
-    songs.map(songsAsText => {
+    const result = songs.map(songsAsText => {
         const [type, name, length] = songsAsText.split("_")
         const song = new Song(type, name, length);
         return song;
@@ -21,6 +21,7 @@ function solve(input) {
     }).filter(song => song.type === typeToDisplay)
     .map((song) => song.name)
     .join("\n");
+    console.log(result);
 }
 
 
